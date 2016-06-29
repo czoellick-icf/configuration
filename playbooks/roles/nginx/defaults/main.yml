@@ -80,10 +80,46 @@ NGINX_EDXAPP_ERROR_PAGES:
   "502": "{{ nginx_default_error_page }}"
   "504": "{{ nginx_default_error_page }}"
 
-CMS_HOSTNAME: '~^((stage|prod)-)?studio.*'
-ECOMMERCE_HOSTNAME: '~^((stage|prod)-)?ecommerce.*'
-PROGRAMS_HOSTNAME: '~^((stage|prod)-)?programs.*'
-CREDENTIALS_HOSTNAME: '~^((stage|prod)-)?credentials.*'
+LMS_HOSTNAME:
+  - '.courses.edx.org'
+  - '*.stage-courses.edx.org'
+  - '*.prod-courses.edx.org'
+CMS_HOSTNAME:
+  - '.studio.edx.org'
+  - '*.stage-studio.edx.org'
+  - '*.prod-studio.edx.org'
+ECOMMERCE_HOSTNAME:
+  - '.ecommerce.edx.org'
+  - '*.stage-ecommerce.edx.org'
+  - '*.prod-ecommerce.edx.org'
+PROGRAMS_HOSTNAME:
+  - '.programs.edx.org'
+  - '*.stage-programs.edx.org'
+  - '*.prod-programs.edx.org'
+CREDENTIALS_HOSTNAME:
+  - '.credentials.edx.org'
+  - '*.stage-credentials.edx.org'
+  - '*.prod-credentials.edx.org'
+INSIGHTS_HOSTNAME:
+  - '.insights.edx.org'
+  - '*.stage-insights.edx.org'
+  - '*.prod-insights.edx.org'
+XQUEUE_HOSTNAME:
+  - '.xqueue.edx.org'
+  - '*.stage-xqueue.edx.org'
+  - '*.prod-xqueue.edx.org'
+HARSTORAGE_HOSTNAME:
+  - '.harstorage.edx.org'
+  - '*.stage-harstorage.edx.org'
+  - '*.prod-harstorage.edx.org'
+XSERVER_HOSTNAME:
+  - '.xserver.elb.edx.org'
+  - '*.stage-xserver.elb.edx.org'
+  - '*.prod-xserver.elb.edx.org'
+FORUM_HOSTNAME:
+  - '.forum.edx.org'
+LMS_PREVIEW_HOSTNAME:
+  - '.preview.edx.org'
 
 nginx_template_dir: "edx/app/nginx/sites-available"
 
