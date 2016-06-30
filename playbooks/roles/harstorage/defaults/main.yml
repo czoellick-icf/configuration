@@ -63,7 +63,5 @@ harstorage_gunicorn_hosts:
 harstorage_gunicorn_port: '{{ harstorage_port }}'
 HARSTORAGE_HOSTNAME:
   - '.harstorage.edx.org'
-  - '*.stage-harstorage.edx.org'
-  - '*.prod-harstorage.edx.org'
 HARSTORAGE_NGINX_PORT: 18170
 HARSTORAGE_SSL_NGINX_PORT: 48170
